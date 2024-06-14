@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    line-height: 1.5;
+    background-color: hsl(0, 0%, 95%);
+    display: flex;
+    flex-direction: column;
+    /* pone a .container-general arriba de .attribution */
+    justify-content: center;
+    /*centra verticalmente los elementos */
+    align-items: center;
+    /*centra horizontalmente los elementos */
+    min-height: 100vh;
+    /*centra horizontalmente los elementos */
+}
+
+.container-general {
+    display: flex;
+    width: 60%;
+}
+
+.container-sedans,
+.container-SUV,
+.container-LUXURY {
+    width: 100%;
+    padding: 30px 40px 40px 40px;
+    height: 65vh;
+}
+
+.container-sedans {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 0 0 10px;
+}
+
+.container-SUV {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.container-LUXURY {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 10px 10px 0;
+}
+
+h2 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 28px;
+    color: hsl(0, 0%, 95%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 12px;
+}
+
+button {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12px;
+    background-color: hsl(0, 0%, 95%);
+    border: 2px solid hsla(0, 0%, 100%, 0.75);
+    border-radius: 30px;
+    margin-top: 70px;
+    padding: 10px 25px;
+}
+
+.container-sedans button {
+    color: hsl(31, 77%, 52%);
+}
+
+.container-SUV button {
+    color: hsl(184, 100%, 22%);
+}
+
+.container-LUXURY button {
+    color: hsl(179, 100%, 13%);
+}
+
+button:hover {
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: transparent;
+}
+
+.attribution {
+    font-size: 11px;
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media query para dispositivos móviles */
+
+@media (max-width: 768px) {
+    .container-general {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .container-sedans,
+    .container-SUV,
+    .container-LUXURY {
+        height: auto;
+    }
+
+    .container-sedans {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .container-LUXURY {
+        border-radius: 0 0 10px 10px;
+        margin-bottom: 0;
+    }
+}
